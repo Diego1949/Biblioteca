@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Biblioteca.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/books")]
 [Produces("application/json")]
 public class BooksController : ControllerBase
 {
