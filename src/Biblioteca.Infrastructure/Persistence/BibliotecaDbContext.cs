@@ -1,4 +1,5 @@
 using Biblioteca.Domain.Entities;
+using Biblioteca.Infrastructure.Persistence.Seed;
 using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca.Infrastructure.Persistence;
@@ -18,6 +19,7 @@ public class BibliotecaDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(BibliotecaDbContext).Assembly);
+        modelBuilder.ApplySeedData();
         base.OnModelCreating(modelBuilder);
     }
 }
