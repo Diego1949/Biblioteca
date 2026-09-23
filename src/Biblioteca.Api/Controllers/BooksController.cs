@@ -35,7 +35,7 @@ public class BooksController : ControllerBase
     public async Task<ActionResult<BookDetailDto>> GetById(int id, CancellationToken cancellationToken)
     {
         var book = await _sender.Send(new GetBookByIdQuery(id), cancellationToken);
-        return book is null ? NotFound() : Ok(book);
+        return book is null ? NotFound() : Ok(book); 
     }
 
     /// <summary>Lista los libros que pertenecen a una categoría.</summary>
